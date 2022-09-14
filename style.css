@@ -1,0 +1,1483 @@
+* {
+    font-family: 'Lexend', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    left: 0;
+    z-index: 100;
+    color: #fff;
+    width: 100%;
+}
+
+nav.activate {
+    backdrop-filter: blur(15px) saturate(500%);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px 0 0 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: .5px;
+    padding: 1rem 1rem;
+}
+
+nav .logo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    margin: 0 30px;
+}
+
+nav .getstarted, .getstarted1 {
+    font-size: 1.7rem;
+    padding: 1rem 1.4rem;
+    border-radius: 30px;
+    transition: all .5s ease;
+    margin-right: 50px;
+}
+
+nav .getstarted {
+    margin-right: 80px;
+}
+
+nav .getstarted:hover, .getstarted1:hover {
+    border: 3px solid #3973ca;
+}
+
+nav .getstarted:hover {
+    transform: translateY(-3px);
+}
+
+.main-btn {
+    color: #fff;
+    background: linear-gradient(90deg, #a148ff 0%, #ff6f45 100%);
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+.main-btn:hover {
+    transform: translateY(-8px);
+}
+
+.getstarted1 {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 30px;
+    display: none;
+}
+
+.hambar {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    transition: all .5s ease;
+}
+
+.hambar:first-child {
+    top: 20px;
+}
+
+.hambar:last-child {
+    bottom: 20px;
+}
+
+.hamburger.active .hambar:first-child {
+    top: initial;
+    transform: rotate(135deg);
+}
+
+.hamburger.active .hambar:last-child {
+    bottom: initial;
+    transform: rotate(-135deg);
+}
+
+.hamburger.active .hambar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+header {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background6.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+header:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgb(94, 113, 219);
+    opacity: .8;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1;
+    width: 690px;
+    margin-left: 90px;
+}
+
+.header h1 {
+    font-size: 6.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header p {
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding: 20px 0;
+    color: #fff;
+    line-height: 35px;
+}
+
+.header a {
+    padding: 1.6rem 4rem;
+    border-radius: 30px;
+    font-size: 1.7rem;
+    transition: all .5s ease;
+}
+
+.header a:hover {
+    transform: translateY(-8px);
+}
+
+/* AboutMe */
+#aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 100px 0;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.aboutme_img {
+    width: 440px;
+    height: 570px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.aboutme_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutme {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9rem 4rem;
+}
+
+.aboutme h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    color: #263D5A;
+    align-self: flex-start;
+}
+
+.aboutsplit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.aboutsplit p {
+    font-size: 1.6rem;
+    color: #263D5A;
+    width: 250px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.aboutsplit p:first-child {
+    margin-right: 20px;
+}
+
+/* Features */
+#features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background1.jpg);
+    background-size: cover;
+    background-color: no-repeat;
+    background-position: center;
+}
+
+.feature_text {
+    text-align: center;
+    color: #fff;
+    width: 760px;
+}
+
+.feature_text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.feature_text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2rem 0;
+    line-height: 42px;
+}
+
+.featureflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 40px 0;
+}
+
+.featurebox {
+    width: 320px;
+    padding: 6rem 2rem;
+    border-radius: 30px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.featurebox i {
+    color: #a148ff;
+    font-size: 4rem;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.featurebox h1 {
+    font-size: 2rem;
+    font-size: bold;
+    color: #263D5A;
+}
+
+.featurebox p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #263D5A;
+    padding: 1.4rem 0;
+    width: 230px;
+    line-height: 30px;
+}
+
+.featurebox a {
+    padding: 1.4rem 4rem;
+    border-radius: 30px;
+    font-size: 1.6rem;
+}
+
+
+/* Compete */
+#compete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    height: 120vh;
+    position: relative;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.competeleft {
+    width: 50%;
+    height: 30vw;
+    left: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 4;
+    position: absolute;
+    left: 30px;
+
+}
+
+.competeleft img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.competeright {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    width: 53%;
+    height: 575.27px;
+    position: absolute;
+    display: flex;
+    right: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 7rem 5rem 7rem 12.5rem;
+    z-index: 2;
+}
+
+.comperighttext {
+    width: 500px;
+    z-index: 5;
+    right: 10rem;
+}
+
+.comperighttext h1 {
+    font-size: 5rem;
+    color: #263D5A;
+}
+
+.comperighttext p {
+    color: #6d819b;
+    text-align: start;
+    line-height: 26px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 2rem 0 1rem 0;
+}
+
+.crbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.crbars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.crbartext {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.crbar progress {
+    width: 100%;
+    color: #ff6f45;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+}
+
+.crbar progress::after {
+    content: '';
+    position: absolute;
+    width: 93%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: coral;
+    border-radius: 30px;
+}
+
+.crbar progress::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #d3d4d4;
+    border-radius: 30px;
+}
+
+.crbar:nth-child(2) progress:after {
+    width: 72%;
+}
+
+.crbar:nth-child(3) progress:after {
+    width: 54%;
+}
+
+.progress {
+    height: 7px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Pricing */
+#pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 0;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pricingtext h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.pricingtext h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.pricingflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricingbox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 7rem 3rem;
+    flex-direction: column;
+    width: 360px;
+}
+
+.pricingbox:nth-child(2) {
+    margin: 0 2rem;
+}
+
+.pricingbox h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    color: #263D5A;
+}
+
+.pricingbox h3 {
+    font-size: 2.8rem;
+    padding: 2rem 0;
+    font: bolder;
+    color: #263D5A;
+}
+
+.pricingbox p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #263D5A;
+    line-height: 30px;
+}
+
+.pricingbox a {
+    padding: 1.3rem 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    border-radius: 30px;
+}
+
+/* Clients */
+#clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clienttext {
+    margin: 0 1.5rem;
+}
+
+.clienttext h2 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    color: #263D5A;
+}
+
+.clienttext h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    color: #263D5A;
+    margin-top: 25px;
+    max-block-size: 40px;
+}
+
+.clientsflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.clientsbox {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 3rem 3rem;
+    margin: 2rem 1.5rem;
+    width: 250px;
+}
+
+.clientsbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Connect */
+#connected {
+    padding: 10rem 0;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connected {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 6rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1000px;
+    position: relative;
+}
+
+.connected::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .4;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.connecttext {
+    font-size: 4.4rem;
+    color: #263D5A;
+    line-height: 55px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.connectflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.connectbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connectbox i {
+    color: #263D5A;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.connectbox h1 {
+    color: #263D5A;
+}
+
+/* Hello */
+#hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10rem 0;
+}
+
+.hello {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 7rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 1000px;
+    min-width: auto;
+    margin: 0 2.5rem;
+}
+
+.hello h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #263D5A;
+    line-height: 30px;
+}
+
+.hello h1 {
+    font-size: 7rem;
+    color: #263D5A;
+    font-weight: 900;
+    margin: 2.5rem 0;
+}
+
+.hello a {
+    font-size: 2rem;
+    position: relative;
+    color: #263D5A;
+    font-weight: bold;
+    padding: 2px 0;
+    transition: all .5s ease;
+}
+
+.hello a:hover {
+    color: #000;
+}
+
+.hello a:after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    left: 0;
+    border-bottom: 2px solid #263D5A;
+    transition: all .5s ease;
+}
+
+.hello a:hover:after {
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+
+/* Feed */
+#feed {
+    padding: 8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feedtext {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 2rem 3rem;
+    color: #263D5A;
+    text-align: center;
+}
+
+.feed {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 3.5rem 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed input {
+    border: none;
+    width: 500px;
+    height: 40px;
+    min-width: auto;
+    padding: 0 10px;
+    outline: none;
+}
+
+.feed input::placeholder {
+    font-size: 1.8rem;
+}
+
+.subscribe {
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+    padding: 0 3rem;
+    font-size: 1.8rem;
+}
+
+.subscribe a:hover {
+    transform: translateY(0);
+}
+
+/* About Me Next */
+#aboutnext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 8rem 0;
+}
+
+.aboutnextimg {
+    width: 348px;
+    height: 475.02px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.aboutnextimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutnexttext {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 6rem 3rem;
+    margin-left: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 700px;
+    position: relative;
+}
+
+.aboutnexttext:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .4;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.aboutnexttext p {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: left;
+    color: #263D5A;
+    line-height: 45px;
+}
+
+.aboutnexttext h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #263D5A;
+    margin-top: 3rem;
+}
+
+/* Contact */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 0;
+    background-image: url(https://mobirise.com/extensions/glassm5/freelancer/assets/images/background1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
+    padding: 7rem 3rem;
+    position: relative;
+    width: 916px;
+}
+.contact h1{
+    font-size: 2.88rem;
+    font-weight: bold;
+    color: #263D5A;
+    margin-bottom: 50px;
+}
+.contactin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact::after{
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    opacity: .4;
+    z-index: -1;
+}
+.contactin input{
+    width: 49%;
+    border: none;
+    border-radius: 5px;
+    height: 4.8rem;
+    padding: 0 20px;
+}
+.contactin input::placeholder , .contactin textarea::placeholder{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #263d5ab9;
+}
+.contactin input:nth-child(3) ,.contactin input:nth-child(4){
+    margin-top: 20px;
+}
+.contactin textarea{
+    width: 100%;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px 20px;
+    min-width: 100%;
+}
+.contact a{
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #131729;
+    padding: 6rem 0;
+    color: #fff;
+}
+.foot1{
+    width: 460px;
+    margin: 0 1.5rem;
+}
+.foot1 h1{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+.foot1 p{
+    margin-top: 2rem;
+    width: 360px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: 25px;
+}
+.foot2{
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 200px;
+}
+.foot2 h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.foot2 a{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    transition: all .3s ease;
+    padding-top: 10px;
+}
+.foot2 a:hover{
+    text-decoration: underline;
+}
+.foot2:last-child{
+    margin-right: 1.5rem;
+}
+
+@media screen and (max-width:1200px) {
+    .aboutme_img {
+        width: 358px;
+        height: 468px;
+    }
+
+    .aboutme {
+        padding: 7rem 2rem;
+    }
+
+    .featureflex {
+        justify-content: space-around;
+    }
+
+    .featurebox {
+        width: 280px;
+    }
+
+    .featurebox p {
+        font-weight: 600;
+        width: 170px;
+        line-height: 28px;
+    }
+
+    .pricingbox {
+        width: 300px;
+        padding: 4rem 3rem;
+    }
+
+    .pricingtext {
+        margin: 0 2rem;
+    }
+
+    .pricingtext h1 {
+        line-height: 35px;
+        margin-top: 20px;
+        font-weight: 400;
+    }
+
+    .aboutnextimg {
+        width: 303px;
+        height: 406.02px;
+    }
+
+    .aboutnexttext {
+        width: 600PX;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    nav {
+        transition: all .5s ease;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: all .5s ease;
+        backdrop-filter: blur(5px) saturate(200%);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.351);
+        border-radius: 12px;
+        border: 0px solid rgba(209, 213, 219, 0.3);
+    }
+
+    nav.active ul {
+        height: 350px;
+        max-height: fit-content;
+        border: 1px solid rgba(209, 213, 219, 0.678);
+        backdrop-filter: blur(20px) saturate(800%);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    nav ul li {
+        margin: 2rem 0;
+    }
+
+    .getstarted1 {
+        display: initial;
+        margin: 0;
+    }
+
+    .getstarted {
+        display: none;
+    }
+
+    #aboutme {
+        flex-direction: column;
+    }
+
+    .aboutme_img {
+        width: 600px;
+        height: 700px;
+        margin: 2rem 0 3rem 0;
+    }
+
+    .aboutme {
+        width: 600px;
+        padding: 9rem 5rem;
+    }
+
+    .aboutsplit {
+        flex-direction: column;
+    }
+
+    .aboutsplit p {
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .aboutsplit p:first-child {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hamburger {
+        display: inherit;
+    }
+
+    .featureflex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .featurebox {
+        width: 340px;
+        margin: 1.6rem 1rem;
+    }
+
+    .feature_text {
+        width: 80%;
+    }
+
+    #compete {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .competeright {
+        position: static;
+        margin-top: 20px;
+        width: 95%;
+        padding: 2rem 5rem;
+        justify-content: flex-start;
+    }
+
+    .competeleft {
+        position: static;
+    }
+
+    .comperighttext {
+        width: 100%;
+    }
+
+    .competeleft {
+        position: static;
+        width: 95%;
+        height: 50vw;
+    }
+
+    .pricingbox, .pricingbox:nth-child(2) {
+        margin: 0 1.5rem;
+        margin-top: 30px;
+    }
+
+    .pricingflex {
+        flex-wrap: wrap;
+    }
+
+    .connected {
+        min-width: auto;
+        width: 800px;
+        margin: 0 2.3rem;
+    }
+
+    .connecttext {
+        margin: 0 2rem;
+    }
+
+    #feed {
+        flex-direction: column;
+    }
+
+    .feed {
+        margin: 0 2rem;
+    }
+
+    #aboutnext {
+        flex-direction: column;
+    }
+
+    .aboutnextimg {
+        width: 600px;
+        height: auto;
+    }
+
+    .aboutnexttext {
+        margin-top: 30px;
+        width: 600px;
+        margin-left: 0;
+    }
+    .contact{
+        width: auto;
+        margin: 0 3rem;
+    }
+    .contactin input{
+        width: 100%;
+    }
+    .contactin input:nth-child(2){
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    header {
+        justify-content: center;
+    }
+
+    .header {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .feed input {
+        width: 277px;
+    }
+    footer{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .foot1{
+        width: 50%;
+    }
+    .foot2:first-child{
+        width: 44%;
+    }
+    .foot1 p{
+        width: auto;
+    }
+    .foot1st{
+        width: 44%;
+        margin-left: 0;
+    }
+    .foot3 , .foot4{
+        width: 44%;
+        margin: 6rem 2rem;
+    }
+
+}
+
+@media screen and (max-width:680px) {
+    .aboutme_img {
+        width: 420px;
+        height: 525px;
+    }
+
+    .aboutme {
+        width: 420px;
+    }
+
+    .aboutme p {
+        text-align: center;
+    }
+
+    #aboutme {
+        padding: 50px 0;
+    }
+
+    .comperighttext h1 {
+        font-size: 4rem;
+        color: #263D5A;
+    }
+
+    .comperighttext {
+        text-align: center;
+    }
+
+    .comperighttext p {
+        text-align: center;
+    }
+
+    .feed {
+        flex-direction: column;
+        margin: 0 2.5rem;
+    }
+
+    .feed a {
+        margin: 4rem 2rem 0 2rem;
+    }
+
+    .feed input {
+        width: 100%;
+    }
+
+    .aboutnextimg {
+        width: auto;
+        height: auto;
+        margin: 0 2.5rem;
+    }
+
+    .aboutnexttext {
+        width: auto;
+        margin: 3rem 2.5rem;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .foot1{
+        width: 90%;
+        padding: 0 2rem;
+        margin: 0;
+    }
+    .foot1 h1{
+        text-align: center;
+    }
+    .foot1 p {
+        width: auto;
+        margin: 0 2rem;
+        text-align: center;
+    }
+    .foot1 , .foot2{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+    }
+    .foot2{
+        margin-top: 3rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .foot3{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .aboutme_img {
+        width: 90%;
+        height: 300px;
+    }
+
+    .aboutme_img {
+        width: 90%;
+        height: 107vw;
+    }
+
+    .aboutme h1 {
+        font-size: 4rem;
+        text-align: center;
+        align-self: center;
+    }
+
+    .aboutme {
+        width: 90%;
+        padding: 2rem 2rem;
+    }
+
+    .feature_text h1 {
+        font-size: 2rem;
+        line-height: 32px;
+    }
+
+    .featureflex {
+        padding: 10px 0;
+    }
+
+    .competeright {
+        padding: 2rem 1.5rem;
+    }
+
+    .comperighttext h1 {
+        font-size: 3rem;
+        color: #263D5A;
+    }
+
+    .connectflex {
+        flex-direction: column;
+    }
+
+    .connectbox {
+        align-self: flex-start;
+        justify-content: flex-start;
+    }
+
+    .connecttext {
+        font-size: 3.2rem;
+    }
+
+    .hello h1 {
+        font-size: 5rem;
+        margin: 2.5rem 0;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .header h1 {
+        font-size: 4rem;
+    }
+
+    .header p {
+        font-size: 1.7rem;
+    }
+
+    .pricingbox {
+        width: auto;
+    }
+
+    .clientsbox {
+        width: auto;
+    }
+
+    .connecttext {
+        font-size: 2.4rem;
+        margin: 0;
+    }
+
+    .hello h1 {
+        font-size: 3rem;
+        margin: 2.5rem 0;
+    }
+
+    .aboutnexttext {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutnexttext p {
+        font-size: 2rem;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .aboutnexttext h2 {
+        font-weight: 900;
+        text-align: center;
+    }
+    .contact{
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .aboutme h1 {
+        font-size: 3rem;
+    }
+
+    .connecttext {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
